@@ -1,5 +1,8 @@
 import React from "react";
 import useForm from '../../hooks/form.js';
+import {connect } from 'react-redux';
+
+import * as actions from '../../store/actions.js'
 
 const TodoForm = props => {
 
@@ -35,4 +38,12 @@ const TodoForm = props => {
     );
 };
 
-export default TodoForm;
+const mapStateToProps = state => ({
+  data: state.data,
+});
+
+const mapDispatchToProps = (dispatch, getState) => ({
+  get: () => dispatch(actions.getRemoteData()),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(TodoForm);

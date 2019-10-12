@@ -17,10 +17,31 @@ You will be submitting the URL to this working sandbox as part of your assignmen
 ### To Do - Reduxified and Fully Connected
 * Upgrade the provided `todo` application 
 * Keep the settings context in place so that you can manage those options within the components
+
+
+
 * Use Redux for global state management
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 * For the to do form, if you're using JSON Schema Forms ...
   * Fetch the To Do schema from the server in the form component on it's initial render
-  * Bonus points if you do this with `<Suspense>`
   * Convert the To Do forms to use the live schema
 * For all CRUD ops, convert the native `fetch...()` calls from being in the components to instead invoking action methods
   * These should return functions that dispatch the real action
